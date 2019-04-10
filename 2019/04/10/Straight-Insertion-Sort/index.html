@@ -110,14 +110,14 @@
   <meta name="description" content="引言插入排序简单的来说就是把一个数插入到一个有序的数列当中，从而使得新的数列仍然有序。再具体点讲，如果有一个数组，数组中有n个元素，如果用两个数组进行实现，其中一个是要排序的乱的数组，一个是空的数组，那么首先把第一个元素插入到空数组中，再取第二个元素插入，那么这个时候就需要判断是否比原先插入的元素大还是小，如果大则直接插入到原先元素后面，如果小则插入到原先元素的前面，然后取第三个元素，对原先插入的">
 <meta name="keywords" content="算法,排序算法,直接插入排序算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Straight Insertion Sort">
+<meta property="og:title" content="八大排序算法之直接插入排序算法">
 <meta property="og:url" content="https://codecreaters.github.io/2019/04/10/Straight-Insertion-Sort/index.html">
 <meta property="og:site_name" content="回忆">
 <meta property="og:description" content="引言插入排序简单的来说就是把一个数插入到一个有序的数列当中，从而使得新的数列仍然有序。再具体点讲，如果有一个数组，数组中有n个元素，如果用两个数组进行实现，其中一个是要排序的乱的数组，一个是空的数组，那么首先把第一个元素插入到空数组中，再取第二个元素插入，那么这个时候就需要判断是否比原先插入的元素大还是小，如果大则直接插入到原先元素后面，如果小则插入到原先元素的前面，然后取第三个元素，对原先插入的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-10T15:00:29.952Z">
+<meta property="og:updated_time" content="2019-04-10T15:03:44.843Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Straight Insertion Sort">
+<meta name="twitter:title" content="八大排序算法之直接插入排序算法">
 <meta name="twitter:description" content="引言插入排序简单的来说就是把一个数插入到一个有序的数列当中，从而使得新的数列仍然有序。再具体点讲，如果有一个数组，数组中有n个元素，如果用两个数组进行实现，其中一个是要排序的乱的数组，一个是空的数组，那么首先把第一个元素插入到空数组中，再取第二个元素插入，那么这个时候就需要判断是否比原先插入的元素大还是小，如果大则直接插入到原先元素后面，如果小则插入到原先元素的前面，然后取第三个元素，对原先插入的">
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>Straight Insertion Sort | 回忆</title>
+  <title>八大排序算法之直接插入排序算法 | 回忆</title>
   
 
 
@@ -383,7 +383,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Straight Insertion Sort
+          <h2 class="post-title" itemprop="name headline">八大排序算法之直接插入排序算法
 
               
             
@@ -409,7 +409,7 @@
                 
               
 
-              <time title="创建时间：2019-04-10 22:56:10 / 修改时间：23:00:29" itemprop="dateCreated datePublished" datetime="2019-04-10T22:56:10+08:00">2019-04-10</time>
+              <time title="创建时间：2019-04-10 22:56:10 / 修改时间：23:03:44" itemprop="dateCreated datePublished" datetime="2019-04-10T22:56:10+08:00">2019-04-10</time>
             
 
             
@@ -473,7 +473,7 @@
       
 
       
-        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>插入排序简单的来说就是把一个数插入到一个有序的数列当中，从而使得新的数列仍然有序。再具体点讲，如果有一个数组，数组中有n个元素，如果用两个数组进行实现，其中一个是要排序的乱的数组，一个是空的数组，那么首先把第一个元素插入到空数组中，再取第二个元素插入，那么这个时候就需要判断是否比原先插入的元素大还是小，如果大则直接插入到原先元素后面，如果小则插入到原先元素的前面，然后取第三个元素，对原先插入的前两个元素进行比较后再插入到合适的位置，依此循环类推；如果用一个数组进行实现，那么可以把这个数组看成两个部分，一个是有序的部分，一个是无序的部分，然后只需要依次取无序的部分插入到有序的部分即可，其实思路和两个数组实现一样，两个数组实现比较好理解，然后首先可以把这个有n个元素的数组的第一个元素看成一个有序的部分，后面的n-1个数看成无序部分，接着取无序部分的第一个数，也就是整个数组的第二个数对前面有序部分的数进行依次比较，然后插入到相应的位置，依次类推，直到无序部分全部取完就结束了。</p>
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>插入排序简单的来说就是把一个数插入到一个有序的数列当中，从而使得新的数列仍然有序。再具体点讲，如果有一个数组，数组中有n个元素，如果用两个数组进行实现，其中一个是要排序的乱的数组，一个是空的数组，那么首先把第一个元素插入到空数组中，再取第二个元素插入，那么这个时候就需要判断是否比原先插入的元素大还是小，如果大则直接插入到原先元素后面，如果小则插入到原先元素的前面，然后取第三个元素，对原先插入的前两个元素进行比较后再插入到合适的位置，依此循环类推；如果用一个数组进行实现，那么可以把这个数组看成两个部分，一个是有序的部分，一个是无序的部分，然后只需要依次取无序的部分插入到有序的部分即可，其实思路和两个数组实现一样，两个数组实现比较好理解，然后首先可以把这个有n个元素的数组的第一个元素看成一个有序的部分，后面的n-1个数看成无序部分，接着取无序部分的第一个数，也就是整个数组的第二个数对前面有序部分的数进行依次比较，然后插入到相应的位置，依次类推，直到无序部分全部取完就结束了。<br><a id="more"></a></p>
 <h2 id="具体思路"><a href="#具体思路" class="headerlink" title="具体思路"></a>具体思路</h2><ul>
 <li>首先考虑第一种方法，用两个数组进行实现，这样可能会好理解一点。<br>首先定义两个数组分别为a[8]，b[8]。a数组中的8个数为9，4，2，11，5，6，30，22；b数组假设是个空的数组（实际默认值为全0）。那么现在a数组就是一个无序的数组，b数组就是一个有序的数组（空数组），现在要做的就是把a数组中的数从0号位开始依次有序的放入到b数组。</li>
 </ul>
@@ -535,7 +535,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://codecreaters.github.io/2019/04/10/Straight-Insertion-Sort/" title="Straight Insertion Sort">https://codecreaters.github.io/2019/04/10/Straight-Insertion-Sort/</a>
+    <a href="https://codecreaters.github.io/2019/04/10/Straight-Insertion-Sort/" title="八大排序算法之直接插入排序算法">https://codecreaters.github.io/2019/04/10/Straight-Insertion-Sort/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
