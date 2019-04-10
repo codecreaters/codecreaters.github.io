@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://codecreaters.github.io/2019/04/10/Straight-Insertion-Sort/</loc>
+    
+    <lastmod>2019-04-10T15:00:29.952Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://codecreaters.github.io/2019/04/08/use-readLine-of-BufferedReader-in-Java-some-pits/</loc>
     
     <lastmod>2019-04-10T13:31:29.703Z</lastmod>
