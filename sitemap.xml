@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://codecreaters.github.io/2019/04/06/MyfirstBlog/</loc>
+    
+    <lastmod>2019-04-11T03:35:08.219Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://codecreaters.github.io/2019/04/10/Straight-Insertion-Sort/</loc>
     
-    <lastmod>2019-04-11T03:25:14.656Z</lastmod>
+    <lastmod>2019-04-11T03:30:55.614Z</lastmod>
     
   </url>
   
@@ -33,13 +40,6 @@
     <loc>https://codecreaters.github.io/about/index.html</loc>
     
     <lastmod>2019-04-08T06:21:46.320Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://codecreaters.github.io/2019/04/06/MyfirstBlog/</loc>
-    
-    <lastmod>2019-04-08T05:05:06.272Z</lastmod>
     
   </url>
   
