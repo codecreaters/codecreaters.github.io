@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="回忆">
 <meta property="og:description" content="引言简单选择排序算法是选择排序算法中的一种，另外一种选择排序就是堆排序了，这种简单的选择排序算法的复杂度其实和冒泡排序算法一样，并且最差情况，平均情况和最好的情况复杂度都是一样的，是一种不稳定的排序算法，主要思路和实现原理也都很简单，就是把一个无序数列中的数找出一个最小的数（从小到大排序的情况，从大到小则找出最大的数）然后与序列的最前面的数进行交换，然后循环依次放置即可。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-18T04:47:32.634Z">
+<meta property="og:updated_time" content="2019-04-18T04:53:43.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="八大排序算法之简单选择排序算法">
 <meta name="twitter:description" content="引言简单选择排序算法是选择排序算法中的一种，另外一种选择排序就是堆排序了，这种简单的选择排序算法的复杂度其实和冒泡排序算法一样，并且最差情况，平均情况和最好的情况复杂度都是一样的，是一种不稳定的排序算法，主要思路和实现原理也都很简单，就是把一个无序数列中的数找出一个最小的数（从小到大排序的情况，从大到小则找出最大的数）然后与序列的最前面的数进行交换，然后循环依次放置即可。">
@@ -409,7 +409,7 @@
                 
               
 
-              <time title="创建时间：2019-04-18 10:05:46 / 修改时间：12:47:32" itemprop="dateCreated datePublished" datetime="2019-04-18T10:05:46+08:00">2019-04-18</time>
+              <time title="创建时间：2019-04-18 10:05:46 / 修改时间：12:53:43" itemprop="dateCreated datePublished" datetime="2019-04-18T10:05:46+08:00">2019-04-18</time>
             
 
             
@@ -475,7 +475,7 @@
       
         <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>简单选择排序算法是选择排序算法中的一种，另外一种选择排序就是堆排序了，这种简单的选择排序算法的复杂度其实和冒泡排序算法一样，并且最差情况，平均情况和最好的情况复杂度都是一样的，是一种不稳定的排序算法，主要思路和实现原理也都很简单，就是把一个无序数列中的数找出一个最小的数（从小到大排序的情况，从大到小则找出最大的数）然后与序列的最前面的数进行交换，然后循环依次放置即可。<br><a id="more"></a></p>
 <h2 id="具体思路"><a href="#具体思路" class="headerlink" title="具体思路"></a>具体思路</h2><p>其实实现思路和直接插入排序有点像，都是把数组分成两个部分，一个是有序的部分，一个是无序的部分，但是直接插入排序是要不断插入在有序部分，需要在有序部分中找到一个合适的位置插入，但简单选择排序则不一样，只需要把最小的找出来放到最前面，之后只需遍历无序部分，然后把最小的找出来依次与前面有序部分的末尾的后一位（也就是无序部分的第一个数）进行交换就可以了。假设现在有一个数列为a，其中元素为5，11，43，6，2，9，7，16 每次查找的步骤如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">      （有序部分）2，11，43，6，5，9，7，16（无序部分）//找出无序部分中最小的数2，这里2就是第一位，无需交换</span><br><span class="line">i=0   2（有序部分），11，43，6，5，9，7，16（无序部分）//找出无序部分中最小的数5，然后与无序部分第一位11进行交换</span><br><span class="line">i=1   2，5（有序部分），43，6，11，9，7，16（无序部分）//找出无序部分中最小的数6，然后与无序部分第一位43进行交换</span><br><span class="line">i=2   2，5，6（有序部分），43，11，9，7，16（无序部分）</span><br><span class="line">i=3   2，5，6，7（有序部分），11，9，43，16（无序部分）</span><br><span class="line">i=4   2，5，6，7，9（有序部分），11，43，16（无序部分）</span><br><span class="line">i=5   2，5，6，7，9，11（有序部分），43，16（无序部分）</span><br><span class="line">i=6   2，5，6，7，9，11，16（有序部分），43（无序部分）</span><br><span class="line">i=7   2，5，6，7，9，11，16，43（有序部分）（无序部分）</span><br></pre></td></tr></table></figure></p>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int selectionSort(int *a,int n)</span><br><span class="line">&#123;</span><br><span class="line">	int min,index; </span><br><span class="line">	<span class="keyword">for</span>(int i=0;i&lt;n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		min=a[i];//设置最小初始值，一般设置为无序部分第一位数 </span><br><span class="line">		index=i;//保存最小那个数的index </span><br><span class="line">		<span class="keyword">for</span>(int j=i+1;j&lt;n;j++)//从无序部分第二位开始找最小值 </span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(min&gt;a[j])</span><br><span class="line">			&#123;</span><br><span class="line">				min=a[j];//找到最小值更新min值 </span><br><span class="line">				index=j;//保存最小值的下标 </span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		swap(a[i],a[index]);//无序部分第一位数和最小值进行交换 </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	int *a=new int[n]; </span><br><span class="line">	<span class="keyword">for</span>(int i=0;i&lt;n;i++)</span><br><span class="line">		cin&gt;&gt;a[i];</span><br><span class="line">	selectionSort(a,n);</span><br><span class="line">	<span class="keyword">for</span>(int i=0;i&lt;n;i++)</span><br><span class="line">		cout&lt;&lt;a[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line">	delete []a;</span><br><span class="line">	<span class="built_in">return</span> 0;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int selectionSort(int *a,int n)</span><br><span class="line">&#123;</span><br><span class="line">	int min,index; </span><br><span class="line">	<span class="keyword">for</span>(int i=0;i&lt;n-1;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		min=a[i];//设置最小初始值，一般设置为无序部分第一位数 </span><br><span class="line">		index=i;//保存最小那个数的index </span><br><span class="line">		<span class="keyword">for</span>(int j=i+1;j&lt;n;j++)//从无序部分第二位开始找最小值 </span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(min&gt;a[j])</span><br><span class="line">			&#123;</span><br><span class="line">				min=a[j];//找到最小值更新min值 </span><br><span class="line">				index=j;//保存最小值的下标 </span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		swap(a[i],a[index]);//无序部分第一位数和最小值进行交换 </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	int *a=new int[n]; </span><br><span class="line">	<span class="keyword">for</span>(int i=0;i&lt;n;i++)</span><br><span class="line">		cin&gt;&gt;a[i];</span><br><span class="line">	selectionSort(a,n);</span><br><span class="line">	<span class="keyword">for</span>(int i=0;i&lt;n;i++)</span><br><span class="line">		cout&lt;&lt;a[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line">	delete []a;</span><br><span class="line">	<span class="built_in">return</span> 0;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>所以以上排序的复杂度是O(n^2),空间复杂度是O(1)，并且这是一个不稳定的排序算法，因为当无序数列中出现两个相同的数时，如果相同的其中一个数在第一位，那么与最小的一个数（最小的一个数如果在另一个相同的数的后面）交换后这两个相同的数前后顺序就破坏了，所以这是一种不稳定的排序。</p>
 
       
@@ -553,6 +553,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/04/18/Binary-Tree/" rel="prev" title="二叉树（Binary Tree）">
+                二叉树（Binary Tree） <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -622,7 +626,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -647,7 +651,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -698,7 +704,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">17</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
