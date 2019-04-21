@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="回忆">
 <meta property="og:description" content="引言树有很多种，有二叉树，三叉树，二三树，红黑树，哈夫曼树，B树，B+树等，二叉树是其中的一种，由于它的每个父节点最多只有两个子节点，所以称之为二叉树，它的两个子节点分别称之为左子节点和右子节点（或者称之为左子树和右子树）。常见的二叉树有完全二叉树，满二叉树，平衡二叉树，二叉搜索树（二叉查找树）。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-21T07:14:22.213Z">
+<meta property="og:updated_time" content="2019-04-21T07:35:11.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二叉树（Binary Tree）">
 <meta name="twitter:description" content="引言树有很多种，有二叉树，三叉树，二三树，红黑树，哈夫曼树，B树，B+树等，二叉树是其中的一种，由于它的每个父节点最多只有两个子节点，所以称之为二叉树，它的两个子节点分别称之为左子节点和右子节点（或者称之为左子树和右子树）。常见的二叉树有完全二叉树，满二叉树，平衡二叉树，二叉搜索树（二叉查找树）。">
@@ -426,7 +426,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-21 15:14:22" itemprop="dateModified" datetime="2019-04-21T15:14:22+08:00">2019-04-21</time>
+                <time title="修改时间：2019-04-21 15:35:11" itemprop="dateModified" datetime="2019-04-21T15:35:11+08:00">2019-04-21</time>
               
             
           </span>
@@ -492,7 +492,9 @@
 <li>性质三 包含n个节点的二叉树的深度为 ${log_2(n+1) (n&gt;=1)}$</li>
 <li>性质四 若二叉树的总节点为N，叶子结点（度为0的节点）的个数为 ${N_0}$ ，度为2的结点数为 ${N_2}$，那么 ${N_0=N_2+1}$ ，度为1的结点数为 ${N_1}$ ，那么 ${N_1=N-N_0-N_2}$ 。</li>
 </ul>
-<p>—–未完——-</p>
+<h2 id="满二叉树"><a href="#满二叉树" class="headerlink" title="满二叉树"></a>满二叉树</h2><p>除最后一层子结点外，以上每一层的结点都有两个子结点的二叉树叫做满二叉树。也就是一棵二叉树上，所有层的结点数达到最大数量的二叉树叫做满二叉树。</p>
+<h2 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h2><p>一棵左右两边子树的高度差不超过1的，并且左右两边的树都是平衡二叉树的二叉树，叫做平衡二叉树。空树，红黑树也是一种平衡二叉树。<br>最小平衡二叉树结点总数的公式为 $F(n)=F(n-1)+F(n-2)+1$ </p>
+<h2 id="二叉查找树"><a href="#二叉查找树" class="headerlink" title="二叉查找树"></a>二叉查找树</h2><p>二叉查找树顾名思义就是用来搜索树中的某个值用的，其搜索，删除，插入复杂度为 $O(log(n))$ ，和二分查找一样必须是有序数列的前提下，因此二叉查找树的左子树上所有结点必须小于根结点（若左子树结点不为空），右子树上所有结点必须大于根结点（若右子树结点不为空）。<br>—–未完——-</p>
 
       
     </div>
@@ -809,7 +811,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树的性质"><span class="nav-number">2.</span> <span class="nav-text">二叉树的性质</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树的性质"><span class="nav-number">2.</span> <span class="nav-text">二叉树的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#满二叉树"><span class="nav-number">3.</span> <span class="nav-text">满二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平衡二叉树"><span class="nav-number">4.</span> <span class="nav-text">平衡二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉查找树"><span class="nav-number">5.</span> <span class="nav-text">二叉查找树</span></a></li></ol></div>
             
 
           </div>
