@@ -107,18 +107,20 @@
 
 
 
-  <meta name="description" content="引言树有很多种，有二叉树，三叉树，二三树，红黑树，哈夫曼树，B树，B+树等，二叉树是其中的一种，由于它的每个父节点最多只有两个子节点，所以称之为二叉树，它的两个子节点分别称之为左子节点和右子节点（或者称之为左子树和右子树）。常见的二叉树有完全二叉树，满二叉树，平衡二叉树，二叉搜索树（二叉查找树）。">
-<meta name="keywords" content="数据结构,树,二叉树,Binary Tree">
+  <meta name="description" content="引言在一次某公司的笔试题中出现了一题在一个无序的浮点数数组中找出相同的数，那么在计算机中一般的整型的十进制数一般都是直接通过“==”来判断两个数是否相等的，但是如果是浮点数还可以用这样的方式进行判断吗？答案是不行的，因为题目中的浮点数并没有指定它的精度，也就是没有说明这个数是float还是double类型的，所以直接比较大小这种方法是错误的。">
+<meta name="keywords" content="浮点数,组成原理,编程语言,C++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二叉树（Binary Tree）">
-<meta property="og:url" content="https://codecreaters.github.io/2019/04/18/Binary-Tree/index.html">
+<meta property="og:title" content="浮点数大小比较">
+<meta property="og:url" content="https://codecreaters.github.io/2019/04/25/floating-number-comparison/index.html">
 <meta property="og:site_name" content="回忆">
-<meta property="og:description" content="引言树有很多种，有二叉树，三叉树，二三树，红黑树，哈夫曼树，B树，B+树等，二叉树是其中的一种，由于它的每个父节点最多只有两个子节点，所以称之为二叉树，它的两个子节点分别称之为左子节点和右子节点（或者称之为左子树和右子树）。常见的二叉树有完全二叉树，满二叉树，平衡二叉树，二叉搜索树（二叉查找树）。">
+<meta property="og:description" content="引言在一次某公司的笔试题中出现了一题在一个无序的浮点数数组中找出相同的数，那么在计算机中一般的整型的十进制数一般都是直接通过“==”来判断两个数是否相等的，但是如果是浮点数还可以用这样的方式进行判断吗？答案是不行的，因为题目中的浮点数并没有指定它的精度，也就是没有说明这个数是float还是double类型的，所以直接比较大小这种方法是错误的。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-21T14:19:02.594Z">
+<meta property="og:image" content="https://codecreaters.github.io/image/floatNumberResult1.png">
+<meta property="og:updated_time" content="2019-04-25T14:51:40.799Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二叉树（Binary Tree）">
-<meta name="twitter:description" content="引言树有很多种，有二叉树，三叉树，二三树，红黑树，哈夫曼树，B树，B+树等，二叉树是其中的一种，由于它的每个父节点最多只有两个子节点，所以称之为二叉树，它的两个子节点分别称之为左子节点和右子节点（或者称之为左子树和右子树）。常见的二叉树有完全二叉树，满二叉树，平衡二叉树，二叉搜索树（二叉查找树）。">
+<meta name="twitter:title" content="浮点数大小比较">
+<meta name="twitter:description" content="引言在一次某公司的笔试题中出现了一题在一个无序的浮点数数组中找出相同的数，那么在计算机中一般的整型的十进制数一般都是直接通过“==”来判断两个数是否相等的，但是如果是浮点数还可以用这样的方式进行判断吗？答案是不行的，因为题目中的浮点数并没有指定它的精度，也就是没有说明这个数是float还是double类型的，所以直接比较大小这种方法是错误的。">
+<meta name="twitter:image" content="https://codecreaters.github.io/image/floatNumberResult1.png">
 
 
 
@@ -126,7 +128,7 @@
 
   
   
-  <link rel="canonical" href="https://codecreaters.github.io/2019/04/18/Binary-Tree/">
+  <link rel="canonical" href="https://codecreaters.github.io/2019/04/25/floating-number-comparison/">
 
 
 
@@ -136,7 +138,7 @@
   };
 </script>
 
-  <title>二叉树（Binary Tree） | 回忆</title>
+  <title>浮点数大小比较 | 回忆</title>
   
 
 
@@ -366,7 +368,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://codecreaters.github.io/2019/04/18/Binary-Tree/">
+    <link itemprop="mainEntityOfPage" href="https://codecreaters.github.io/2019/04/25/floating-number-comparison/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="rain">
@@ -383,7 +385,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">二叉树（Binary Tree）
+          <h2 class="post-title" itemprop="name headline">浮点数大小比较
 
               
             
@@ -409,24 +411,12 @@
                 
               
 
-              <time title="创建时间：2019-04-18 22:21:14" itemprop="dateCreated datePublished" datetime="2019-04-18T22:21:14+08:00">2019-04-18</time>
+              <time title="创建时间：2019-04-25 21:54:03 / 修改时间：22:51:40" itemprop="dateCreated datePublished" datetime="2019-04-25T21:54:03+08:00">2019-04-25</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-21 22:19:02" itemprop="dateModified" datetime="2019-04-21T22:19:02+08:00">2019-04-21</time>
               
             
           </span>
@@ -443,7 +433,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/组成原理/" itemprop="url" rel="index"><span itemprop="name">组成原理</span></a></span>
 
                 
                 
@@ -485,17 +475,21 @@
       
 
       
-        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>树有很多种，有二叉树，三叉树，二三树，红黑树，哈夫曼树，B树，B+树等，二叉树是其中的一种，由于它的每个父节点最多只有两个子节点，所以称之为二叉树，它的两个子节点分别称之为左子节点和右子节点（或者称之为左子树和右子树）。常见的二叉树有完全二叉树，满二叉树，平衡二叉树，二叉搜索树（二叉查找树）。<br><a id="more"></a></p>
-<h2 id="二叉树的性质"><a href="#二叉树的性质" class="headerlink" title="二叉树的性质"></a>二叉树的性质</h2><ul>
-<li>性质一 第i层的二叉树上的节点个数为 ${2^{i-1} (i&gt;=1)}$</li>
-<li>性质二 树的深度为h的二叉树，子节点个数为 ${2^h-1个(h&gt;=1)}$</li>
-<li>性质三 包含n个节点的二叉树的深度为 ${log_2(n+1) (n&gt;=1)}$</li>
-<li>性质四 若二叉树的总节点为N，叶子结点（度为0的节点）的个数为 ${N_0}$ ，度为2的结点数为 ${N_2}$，那么 ${N_0=N_2+1}$ ，度为1的结点数为 ${N_1}$ ，那么 ${N_1=N-N_0-N_2}$ 。</li>
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在一次某公司的笔试题中出现了一题在一个无序的浮点数数组中找出相同的数，那么在计算机中一般的整型的十进制数一般都是直接通过“==”来判断两个数是否相等的，但是如果是浮点数还可以用这样的方式进行判断吗？答案是不行的，因为题目中的浮点数并没有指定它的精度，也就是没有说明这个数是float还是double类型的，所以直接比较大小这种方法是错误的。<br><a id="more"></a></p>
+<h2 id="样例程序"><a href="#样例程序" class="headerlink" title="样例程序"></a>样例程序</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include &lt;bitset&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    	</span><br><span class="line">    double a = (double)0.2;</span><br><span class="line">    <span class="built_in">float</span> b = (<span class="built_in">float</span>)0.2;</span><br><span class="line">    unsigned long long aMem = *(unsigned long long *)&amp;a;</span><br><span class="line">    unsigned long long bMem = *(unsigned long long *)&amp;b;</span><br><span class="line">    bitset&lt;32&gt; aBit(aMem);</span><br><span class="line">    bitset&lt;32&gt; bBit(bMem);</span><br><span class="line">    <span class="keyword">if</span> (a == b)</span><br><span class="line">        cout&lt;&lt;<span class="string">"true"</span>&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        cout&lt;&lt;<span class="string">"false"</span>&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;aBit&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;bBit&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">return</span> 0;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>运行结果<br><img src="/image/floatNumberResult1.png" alt="运行结果"></li>
 </ul>
-<h2 id="满二叉树"><a href="#满二叉树" class="headerlink" title="满二叉树"></a>满二叉树</h2><p>除最后一层子结点外，以上每一层的结点都有两个子结点的二叉树叫做满二叉树。也就是一棵二叉树上，所有层的结点数达到最大数量的二叉树叫做满二叉树。</p>
-<h2 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h2><p>一棵左右两边子树的高度差不超过1的，并且左右两边的树都是平衡二叉树的二叉树，叫做平衡二叉树。空树，红黑树也是一种平衡二叉树。<br>最小平衡二叉树结点总数的公式为 $F(n)=F(n-1)+F(n-2)+1$ </p>
-<h2 id="二叉查找树"><a href="#二叉查找树" class="headerlink" title="二叉查找树"></a>二叉查找树</h2><p>二叉查找树顾名思义就是用来搜索树中的某个值用的，其搜索，删除，插入复杂度为 $O(log(n))$ ，和二分查找一样必须是有序数列的前提下，因此二叉查找树的左子树上所有结点必须小于根结点（若左子树结点不为空），右子树上所有结点必须大于根结点（若右子树结点不为空）。</p>
-<h2 id="完全二叉树"><a href="#完全二叉树" class="headerlink" title="完全二叉树"></a>完全二叉树</h2><p>—–未完——-</p>
+<p>可以看到十进制的0.2，在两种不同精度的情况下，它们的二进制是不一样的，同时float的精度比double要小。<br>举个例子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10/3=3.333333333...</span><br></pre></td></tr></table></figure></p>
+<p>定义float的变量来存储和定义double的变量来存储，它们之间的大小是不一样的，因为精度不同。<br>再来看以下程序<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    	</span><br><span class="line">    double a = (double)1.0;</span><br><span class="line">    double b = (double)0.0;</span><br><span class="line">    <span class="keyword">for</span> (int i=0; i&lt;10;++i)</span><br><span class="line">        b += 0.1;</span><br><span class="line">    <span class="keyword">if</span> (a == b)</span><br><span class="line">        cout&lt;&lt;<span class="string">"true"</span>&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        cout&lt;&lt;<span class="string">"false"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">return</span> 0;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>运行结果<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">false</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>可以看到即使两个数都是double型的，但是b在经过10次累加计算后结果却与a不同，这是为什么呢？<br>变量b在计算机中计算过程如下：<br>把值存到内存中（或高速缓存）-&gt; CPU浮点数寄存器（精度扩展）-&gt; CPU浮点计算单元计算 -&gt; 浮点寄存器 -&gt; 从新把计算结果存到内存（精度降低）<br>但是编译器为了优化执行效率，会把浮点数计算结果暂时存在浮点寄存器中，下次使用该值的时候就不用再从内存读取了，从而导致浮点寄存器中的值与内存中的两个相同的数精度不同，也就是直接拿浮点寄存器中的值与内存中的值进行了比较，那么两个精度不同的数大小自然不同，这就是浮点数为什么不能直接用“==”来比较的原因了，那么要怎么比较两个浮点数大小呢？可以用以下方法：</p>
+<pre><code class="bash"><span class="keyword">if</span> (abs(a-b)&lt;1e-8)
+</code></pre>
+<p>这里对两个变量a和b进行了相减操作，然后判断它们之间的误差是否要小于这个精度即可（计算环境变化这个精度取值也会有所不同）。</p>
 
       
     </div>
@@ -530,7 +524,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://codecreaters.github.io/2019/04/18/Binary-Tree/" title="二叉树（Binary Tree）">https://codecreaters.github.io/2019/04/18/Binary-Tree/</a>
+    <a href="https://codecreaters.github.io/2019/04/25/floating-number-comparison/" title="浮点数大小比较">https://codecreaters.github.io/2019/04/25/floating-number-comparison/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -543,13 +537,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
+            <a href="/tags/浮点数/" rel="tag"><i class="fa fa-tag"></i> 浮点数</a>
           
-            <a href="/tags/树/" rel="tag"><i class="fa fa-tag"></i> 树</a>
+            <a href="/tags/组成原理/" rel="tag"><i class="fa fa-tag"></i> 组成原理</a>
           
-            <a href="/tags/二叉树/" rel="tag"><i class="fa fa-tag"></i> 二叉树</a>
+            <a href="/tags/编程语言/" rel="tag"><i class="fa fa-tag"></i> 编程语言</a>
           
-            <a href="/tags/Binary-Tree/" rel="tag"><i class="fa fa-tag"></i> Binary Tree</a>
+            <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C++</a>
           
         </div>
       
@@ -562,8 +556,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/18/Selection-Sort/" rel="next" title="八大排序算法之简单选择排序算法">
-                <i class="fa fa-chevron-left"></i> 八大排序算法之简单选择排序算法
+              <a href="/2019/04/18/Binary-Tree/" rel="next" title="二叉树（Binary Tree）">
+                <i class="fa fa-chevron-left"></i> 二叉树（Binary Tree）
               </a>
             
           </div>
@@ -571,10 +565,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/25/floating-number-comparison/" rel="prev" title="浮点数大小比较">
-                浮点数大小比较 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -824,7 +814,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树的性质"><span class="nav-number">2.</span> <span class="nav-text">二叉树的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#满二叉树"><span class="nav-number">3.</span> <span class="nav-text">满二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平衡二叉树"><span class="nav-number">4.</span> <span class="nav-text">平衡二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉查找树"><span class="nav-number">5.</span> <span class="nav-text">二叉查找树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完全二叉树"><span class="nav-number">6.</span> <span class="nav-text">完全二叉树</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#样例程序"><span class="nav-number">2.</span> <span class="nav-text">样例程序</span></a></li></ol></div>
             
 
           </div>
@@ -1032,46 +1022,6 @@
   
   
 
-  
-    
-      <script type="text/x-mathjax-config">
-  
-
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-      
-      equationNumbers: {
-        autoNumber: 'AMS'
-      }
-    }
-  });
-  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
-    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
-      if (data.display) {
-        var next = data.script.nextSibling;
-        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
-        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
-      }
-    });
-  });
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for (i = 0; i < all.length; i += 1) {
-      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
-    }
-  });
-</script>
-<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-    
   
 
 
