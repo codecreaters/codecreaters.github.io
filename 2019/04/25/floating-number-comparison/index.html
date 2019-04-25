@@ -108,7 +108,7 @@
 
 
   <meta name="description" content="引言在一次某公司的笔试题中出现了一题在一个无序的浮点数数组中找出相同的数，那么在计算机中一般的整型的十进制数一般都是直接通过“==”来判断两个数是否相等的，但是如果是浮点数还可以用这样的方式进行判断吗？答案是不行的，因为题目中的浮点数并没有指定它的精度，也就是没有说明这个数是float还是double类型的，所以直接比较大小这种方法是错误的。">
-<meta name="keywords" content="浮点数,组成原理,编程语言,C++">
+<meta name="keywords" content="C++,浮点数,组成原理,编程语言">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浮点数大小比较">
 <meta property="og:url" content="https://codecreaters.github.io/2019/04/25/floating-number-comparison/index.html">
@@ -116,7 +116,7 @@
 <meta property="og:description" content="引言在一次某公司的笔试题中出现了一题在一个无序的浮点数数组中找出相同的数，那么在计算机中一般的整型的十进制数一般都是直接通过“==”来判断两个数是否相等的，但是如果是浮点数还可以用这样的方式进行判断吗？答案是不行的，因为题目中的浮点数并没有指定它的精度，也就是没有说明这个数是float还是double类型的，所以直接比较大小这种方法是错误的。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://codecreaters.github.io/image/floatNumberResult1.png">
-<meta property="og:updated_time" content="2019-04-25T14:51:40.799Z">
+<meta property="og:updated_time" content="2019-04-25T14:52:52.203Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浮点数大小比较">
 <meta name="twitter:description" content="引言在一次某公司的笔试题中出现了一题在一个无序的浮点数数组中找出相同的数，那么在计算机中一般的整型的十进制数一般都是直接通过“==”来判断两个数是否相等的，但是如果是浮点数还可以用这样的方式进行判断吗？答案是不行的，因为题目中的浮点数并没有指定它的精度，也就是没有说明这个数是float还是double类型的，所以直接比较大小这种方法是错误的。">
@@ -411,7 +411,7 @@
                 
               
 
-              <time title="创建时间：2019-04-25 21:54:03 / 修改时间：22:51:40" itemprop="dateCreated datePublished" datetime="2019-04-25T21:54:03+08:00">2019-04-25</time>
+              <time title="创建时间：2019-04-25 21:54:03 / 修改时间：22:52:52" itemprop="dateCreated datePublished" datetime="2019-04-25T21:54:03+08:00">2019-04-25</time>
             
 
             
@@ -486,7 +486,7 @@
 <li>运行结果<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">false</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>可以看到即使两个数都是double型的，但是b在经过10次累加计算后结果却与a不同，这是为什么呢？<br>变量b在计算机中计算过程如下：<br>把值存到内存中（或高速缓存）-&gt; CPU浮点数寄存器（精度扩展）-&gt; CPU浮点计算单元计算 -&gt; 浮点寄存器 -&gt; 从新把计算结果存到内存（精度降低）<br>但是编译器为了优化执行效率，会把浮点数计算结果暂时存在浮点寄存器中，下次使用该值的时候就不用再从内存读取了，从而导致浮点寄存器中的值与内存中的两个相同的数精度不同，也就是直接拿浮点寄存器中的值与内存中的值进行了比较，那么两个精度不同的数大小自然不同，这就是浮点数为什么不能直接用“==”来比较的原因了，那么要怎么比较两个浮点数大小呢？可以用以下方法：</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>可以看到即使两个数都是double型的，但是b在经过10次累加计算后结果却与a不同，这是为什么呢？<br>变量b在计算机中计算过程如下：<br>把值存到内存中（或高速缓存）-&gt; CPU浮点数寄存器（精度扩展）-&gt; CPU浮点计算单元计算 -&gt; 浮点寄存器 -&gt; 从新把计算结果存到内存（精度降低）<br>但是编译器为了优化执行效率，会把浮点数计算结果暂时存在浮点寄存器中，下次使用该值的时候就不用再从内存读取了，从而导致浮点寄存器中的值与内存中的两个相同的数精度不同，也就是直接拿浮点寄存器中的值与内存中的值进行了比较，那么两个精度不同的数大小自然不同，这就是浮点数为什么不能直接用“==”来比较的原因了，那么要怎么比较两个浮点数大小呢？可以用以下方法：</p>
 <pre><code class="bash"><span class="keyword">if</span> (abs(a-b)&lt;1e-8)
 </code></pre>
 <p>这里对两个变量a和b进行了相减操作，然后判断它们之间的误差是否要小于这个精度即可（计算环境变化这个精度取值也会有所不同）。</p>
@@ -537,13 +537,13 @@
       
         <div class="post-tags">
           
+            <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C++</a>
+          
             <a href="/tags/浮点数/" rel="tag"><i class="fa fa-tag"></i> 浮点数</a>
           
             <a href="/tags/组成原理/" rel="tag"><i class="fa fa-tag"></i> 组成原理</a>
           
             <a href="/tags/编程语言/" rel="tag"><i class="fa fa-tag"></i> 编程语言</a>
-          
-            <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C++</a>
           
         </div>
       
@@ -814,7 +814,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#样例程序"><span class="nav-number">2.</span> <span class="nav-text">样例程序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#样例程序"><span class="nav-number">2.</span> <span class="nav-text">样例程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
