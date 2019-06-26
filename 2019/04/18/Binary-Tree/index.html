@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="回忆">
 <meta property="og:description" content="引言树有很多种，有二叉树，三叉树，二三树，红黑树，哈夫曼树，B树，B+树等，二叉树是其中的一种，由于它的每个父结点最多只有两个子结点，所以称之为二叉树，它的两个子结点分别称之为左子结点和右子结点（或者称之为左子树和右子树）。常见的二叉树有完全二叉树，满二叉树，平衡二叉树，二叉搜索树（二叉查找树）。二叉树可以是空树，根结点可以没有子结点。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-27T03:49:39.422Z">
+<meta property="og:updated_time" content="2019-05-07T03:23:08.585Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二叉树（Binary Tree）">
 <meta name="twitter:description" content="引言树有很多种，有二叉树，三叉树，二三树，红黑树，哈夫曼树，B树，B+树等，二叉树是其中的一种，由于它的每个父结点最多只有两个子结点，所以称之为二叉树，它的两个子结点分别称之为左子结点和右子结点（或者称之为左子树和右子树）。常见的二叉树有完全二叉树，满二叉树，平衡二叉树，二叉搜索树（二叉查找树）。二叉树可以是空树，根结点可以没有子结点。">
@@ -426,7 +426,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-27 11:49:39" itemprop="dateModified" datetime="2019-04-27T11:49:39+08:00">2019-04-27</time>
+                <time title="修改时间：2019-05-07 11:23:08" itemprop="dateModified" datetime="2019-05-07T11:23:08+08:00">2019-05-07</time>
               
             
           </span>
@@ -492,10 +492,10 @@
 <li>性质三 包含n个结点的二叉树的深度为 ${log_2(n+1) (n&gt;=1)}$</li>
 <li>性质四 若二叉树的总结点为N，叶子结点（度为0的结点）的个数为 ${N_0}$ ，度为2的结点数为 ${N_2}$，那么 ${N_0=N_2+1}$ ，度为1的结点数为 ${N_1}$ ，那么 ${N_1=N-N_0-N_2}$ 。</li>
 </ul>
-<h2 id="完全二叉树"><a href="#完全二叉树" class="headerlink" title="完全二叉树"></a>完全二叉树</h2><p>完全二叉树用通俗的话来说就是除了最后两层，其它每层的父节点都存在两个子结点，所有叶子结点必须是从左往右依次排列的，最后一层叶子结点可以缺省右边的一些结点，但是顺序必须是从左往右（最后一层结点都是依次靠左排列）。</p>
+<h2 id="完全二叉树"><a href="#完全二叉树" class="headerlink" title="完全二叉树"></a>完全二叉树</h2><p>完全二叉树用通俗的话来说就是除了最后两层，其它每层的父结点都存在两个子结点，所有叶子结点必须是从左往右依次排列的，最后一层叶子结点可以缺省右边的一些结点，但是顺序必须是从左往右（最后一层结点都是依次靠左排列）。</p>
 <h2 id="满二叉树"><a href="#满二叉树" class="headerlink" title="满二叉树"></a>满二叉树</h2><p>每一层的结点都有两个子结点的二叉树叫做满二叉树。也就是一棵二叉树上，所有层的结点数达到最大数量的二叉树叫做满二叉树。满二叉树其实就是一种特殊的完全二叉树，它满足完全二叉树的一些特性。</p>
 <h2 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h2><p>一棵左右两边子树的高度差不超过1的，并且左右两边的树都是平衡二叉树的二叉树，叫做平衡二叉树。空树，红黑树也是一种平衡二叉树。<br>最小平衡二叉树结点总数的公式为 $F(n)=F(n-1)+F(n-2)+1$ </p>
-<h2 id="二叉查找树"><a href="#二叉查找树" class="headerlink" title="二叉查找树"></a>二叉查找树</h2><p>二叉查找树顾名思义就是用来搜索树中的某个值用的，其搜索，删除，插入复杂度为 $O(log(n))$ ，和二分查找一样必须是有序数列的前提下，因此二叉查找树的左子树上所有结点必须小于根结点（若左子树结点不为空），右子树上所有结点必须大于根结点（若右子树结点不为空）,没有键值相同的结点。</p>
+<h2 id="二叉查找树（二叉搜索树）"><a href="#二叉查找树（二叉搜索树）" class="headerlink" title="二叉查找树（二叉搜索树）"></a>二叉查找树（二叉搜索树）</h2><p>二叉查找树顾名思义就是用来搜索树中的某个值用的，也是平衡搜索树中的一种，其搜索，删除，插入复杂度为 $O(log(n))$ ，和二分查找一样必须是有序数列的前提下，因此二叉查找树的左子树上所有结点必须小于根结点（若左子树结点不为空），右子树上所有结点必须大于根结点（若右子树结点不为空）,没有键值相同的结点。</p>
 <h2 id="二叉树的创建代码实现"><a href="#二叉树的创建代码实现" class="headerlink" title="二叉树的创建代码实现"></a>二叉树的创建代码实现</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>—–未完——-</p>
 
@@ -840,7 +840,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树的性质"><span class="nav-number">2.</span> <span class="nav-text">二叉树的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完全二叉树"><span class="nav-number">3.</span> <span class="nav-text">完全二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#满二叉树"><span class="nav-number">4.</span> <span class="nav-text">满二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平衡二叉树"><span class="nav-number">5.</span> <span class="nav-text">平衡二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉查找树"><span class="nav-number">6.</span> <span class="nav-text">二叉查找树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树的创建代码实现"><span class="nav-number">7.</span> <span class="nav-text">二叉树的创建代码实现</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树的性质"><span class="nav-number">2.</span> <span class="nav-text">二叉树的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完全二叉树"><span class="nav-number">3.</span> <span class="nav-text">完全二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#满二叉树"><span class="nav-number">4.</span> <span class="nav-text">满二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平衡二叉树"><span class="nav-number">5.</span> <span class="nav-text">平衡二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉查找树（二叉搜索树）"><span class="nav-number">6.</span> <span class="nav-text">二叉查找树（二叉搜索树）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树的创建代码实现"><span class="nav-number">7.</span> <span class="nav-text">二叉树的创建代码实现</span></a></li></ol></div>
             
 
           </div>
